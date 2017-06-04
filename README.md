@@ -11,3 +11,7 @@ React + Flask login
 * React-Router-Redux
 * Webpack
 
+
+# Base
+
+https://github.com/velaciela-ringWing2007/React-Redux-Flask

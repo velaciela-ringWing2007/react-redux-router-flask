@@ -8,13 +8,13 @@ import {
   Redirect
 } from 'react-router-dom';
 import { syncHistoryWithStore } from 'react-router-redux';
-import createBrowserHistory from 'history';
+import { createHashHistory } from 'history';
 
 import configureStore from './store/configureStore.jsx';
 import routes from './routes.jsx';
 
 const store = configureStore();
-const history = createBrowserHistory();
+const history = syncHistoryWithStore(createHashHistory(), store, {query_support: true});
 
 ReactDOM.render(
   <Provider store={store} >
@@ -23,4 +23,5 @@ ReactDOM.render(
       {routes}
     </Router>
   </Provider>
+  , document.getElementById("app")
 );
