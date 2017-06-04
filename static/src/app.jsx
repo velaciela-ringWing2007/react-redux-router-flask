@@ -19,8 +19,10 @@ const history = syncHistoryWithStore(createHashHistory(), store, {query_support:
 ReactDOM.render(
   <Provider store={store} >
     <Router history={history} >
-      <Redirect from="/" to="/main"/>
-      {routes}
+      <div>
+        <Redirect from="/" to="/main"/>
+        {routes}
+      </div>
     </Router>
   </Provider>
   , document.getElementById("app")
