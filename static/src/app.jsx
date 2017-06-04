@@ -20,7 +20,7 @@ ReactDOM.render(
   <Provider store={store} >
     <Router history={history} >
       <div>
-        <Redirect from="/" to="/main"/>
+        {/*<Redirect from="/" to="/main"/>*/}
         {routes}
       </div>
     </Router>
